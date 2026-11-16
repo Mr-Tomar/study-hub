@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Hub</title>
+  <meta name="description" content="Free and freemium study websites, sorted by subject. Nothing paid, nothing shady." />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Dark mode pull cord -->
+  <button id="darkToggle" class="pull-cord" data-tip="Click to turn on dark mode" aria-label="Turn on dark mode">
+    <span class="cord" aria-hidden="true"></span>
+    <span class="knob" aria-hidden="true"></span>
+  </button>
+
+  <header class="hero">
+    <p class="eyebrow">hey, welcome in 👋</p>
+    <h1>Study <span class="squiggle">Hub</span></h1>
+    <p class="lead">
+      Free study websites, sorted by subject. Nothing paid, nothing shady,
+      just the stuff that actually helps you learn. Look around and take what you need.
+    </p>
+
+    <div class="search">
+      <input id="search" type="search" placeholder="Looking for something? Try 'calculus' or 'python'" aria-label="Search study sites" autocomplete="off" />
+      <button id="clear" class="btn" type="button" hidden>Clear</button>
+    </div>
+
+    <div id="filters" class="filters" role="group" aria-label="Filter by subject"></div>
+  </header>
+
+  <main>
+
+    <section class="top-picks" id="top-picks" aria-labelledby="top-picks-title" hidden>
+      <h2 id="top-picks-title" class="category-head">
+        <span aria-hidden="true">★</span> Top Picks · Things I personally suggest
+      </h2>
+      <div class="cards" id="top-cards"></div>
+    </section>
+
+    <p class="status" id="status">Getting the shelves ready…</p>
+
+    <div id="results"></div>
+
+    <div class="empty" id="empty" hidden>
+      <p>Hmm, nothing matched that one. Try a simpler word, or clear the search and browse.</p>
+    </div>
+
+    <section class="suggest" aria-labelledby="suggest-title">
+      <h2 id="suggest-title">Know a good one I missed?</h2>
+      <p>
+        I'd love to hear about it. Send me the link and a line about why it's useful,
+        and I'll take a look.
+      </p>
+      <a class="btn btn-primary" href="https://github.com/void-learns-stuff/study-hub/issues/new" target="_blank" rel="noopener">
+        Suggest a site
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>
+      Every link is labelled Free or Freemium. Found a dead one? Let me know.
+      Made by hand, one link at a time. · © 2026
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
